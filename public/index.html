@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="pt-BR">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#086550"><title>Retorno • Portal do fornecedor</title><link rel="stylesheet" href="/styles.css"><script src="/app.js" defer></script></head>
+<body>
+<header><a class="brand" href="/" aria-label="Retorno, início"><span class="brand-icon">↗</span> retorno<span class="brand-divider">/</span><small>Portal do fornecedor</small></a><span class="header-note">Relacionamentos que entregam.</span></header>
+<main>
+<div id="demo" class="demo" hidden><strong>Modo demonstração</strong><span>Dados fictícios. As respostas ficam somente neste navegador.</span></div>
+<section class="intro"><div><div class="eyebrow">ACOMPANHAMENTO DE COMPRAS</div><h1>Vamos atualizar<br>seus pedidos?</h1><p>Confira os itens, informe as previsões e envie tudo de uma vez.</p></div><div class="supplier"><span class="avatar">↗</span><div><small>FORNECEDOR</small><strong id="supplier">Carregando…</strong><span id="expiry"></span></div></div></section>
+<div id="alert" role="alert" hidden></div>
+<div id="workspace" hidden>
+<section class="stats" aria-label="Resumo"><div><span>Itens nesta cobrança</span><strong id="total">0</strong></div><div><span>Prontos para enviar</span><strong id="done">0</strong></div><div><span>Aguardando preenchimento</span><strong id="pending">0</strong></div><div class="progress-card"><span>Seu progresso <b id="percent">0%</b></span><progress id="progress" max="100" value="0"></progress><small>Você pode salvar e continuar depois.</small></div></section>
+<section class="panel"><div class="panel-top"><div><h2>Itens do pedido</h2><p>Os dados da compra já estão preenchidos. Complete as informações de retorno.</p></div><span class="pill" id="status">Em preenchimento</span></div>
+<div class="filters"><label class="search"><span>⌕</span><input id="search" type="search" placeholder="Buscar pedido, material ou descrição" aria-label="Buscar itens"></label><label class="filter-label">Mostrar<select id="filter"><option value="all">Todos os itens</option><option value="pending">Pendentes</option><option value="done">Preenchidos</option><option value="divergence">Com divergência</option></select></label></div>
+<div class="bulk"><label class="check"><input type="checkbox" id="selectAll">Selecionar página</label><span id="selected">0 selecionados</span><button id="receivedAll" class="subtle" type="button">Marcar recebidos</button><label class="batch-date">Previsão <input type="date" id="bulkDate" aria-label="Previsão para selecionados"></label><button id="applyDate" class="subtle" type="button">Aplicar data</button><button id="clearSelection" class="text-button" type="button">Limpar seleção</button></div>
+<div id="items" class="items"></div><div id="empty" class="empty" hidden>Nenhum item encontrado. Tente outra busca ou filtro.</div>
+<div class="pagination"><span id="range"></span><div><button id="prev" class="subtle" type="button">← Anterior</button><button id="next" class="subtle" type="button">Próxima →</button></div></div>
+</section>
+<section class="finish"><div><h2>Quem está respondendo?</h2><p>Seu nome será registrado junto ao retorno dos pedidos.</p></div><label>Nome do responsável <input id="responder" maxlength="200" autocomplete="name" placeholder="Digite seu nome"></label></section>
+<div class="action-bar"><div><span class="save-dot"></span><span id="saveStatus" role="status" aria-live="polite">Alterações ainda não salvas</span></div><div class="actions"><button id="save" class="secondary" type="button">Salvar rascunho</button><button id="submit" class="primary" type="button">Revisar e enviar <span>↗</span></button></div></div>
+</div>
+<footer><strong>retorno</strong><span>Mais clareza em cada entrega.</span><span>Precisa de ajuda? Entre em contato com o comprador que enviou a cobrança.</span></footer>
+</main>
+<dialog id="confirm"><h2>Enviar o retorno dos pedidos?</h2><p id="confirmText"></p><p>Confira as informações antes de concluir. Após o envio, esta cobrança ficará disponível somente para consulta.</p><div class="actions"><button id="cancel" class="secondary">Voltar e conferir</button><button id="confirmSend" class="primary">Confirmar envio</button></div></dialog>
+</body></html>

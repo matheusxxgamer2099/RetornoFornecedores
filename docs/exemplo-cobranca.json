@@ -1,0 +1,10 @@
+{
+  "supplier": "Fornecedor Exemplo Ltda.",
+  "email": "fornecedor@example.com",
+  "expiresInDays": 7,
+  "items": [
+    {"id":"TESTE-001","order":"4500000001","item":"10","material":"MAT001","description":"Retentor de vedação","quantity":"2","unit":"PC","due":"2026-10-22"},
+    {"id":"TESTE-002","order":"4500000001","item":"20","material":"MAT002","description":"Tubo de aço","quantity":"5","unit":"PC","due":"2026-10-23"},
+    {"id":"TESTE-003","order":"4500000002","item":"10","material":"MAT003","description":"Compressor","quantity":"1","unit":"UN","due":"2026-10-24"}
+  ]
+}
